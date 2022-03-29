@@ -3,9 +3,25 @@
     --MazdaBlueText: #fff;
 }
 
-.overviewHeader{
-    text-align: center;
+
+.outerContainer{
+    padding: 0px 120px;
 }
+
+/*Text above cards*/
+.overviewHeader{
+    margin-bottom: 60px;
+    margin-top: 20px;
+    color: #1C274D;
+}
+
+.thinLine{
+    width: 100%;
+    height: 2px;
+    background-color: #646E95;
+}
+
+/* CARD CSS */
 .cardWidth{
     width:400px;
 }
