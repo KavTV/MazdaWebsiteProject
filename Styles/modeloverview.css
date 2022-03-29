@@ -1,0 +1,61 @@
+.cardWidth{
+    width:400px;
+}
+.cardShadows{
+    border: none;
+}
+.carName{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.infoCards{
+    position: absolute;
+    left: 120px;
+    display: flex;
+    flex: auto;
+    flex-flow: column;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.infoCardText{
+    margin: 5px;
+    font-size: small;
+    text-align: center;
+    color: #910a2d;
+}
+
+.cardSpacing{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: #910a2d;
+    background-color: transparent;
+}
+
+.buildButton{
+    border: 2px solid #910a2d;
+    color: #910a2d;
+}
+.buildButton:hover{
+    color: #fff;
+    background-color: #910a2d;
+}
+
+.underpicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    margin-right: 10px;
+}
+
+.cardBackground{
+    position: absolute;
+    z-index: -1;
+    background-color: #d7d7d7;
+    height: 115px;
+    width: 400px;
+}
