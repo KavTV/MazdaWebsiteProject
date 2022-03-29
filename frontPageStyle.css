@@ -1,7 +1,20 @@
 :root {
     --MazdaBlue:#2F4180;
+    --MazdaBlueText:#ffffff;
 }
 
 .test {
     color: var(--MazdaBlue);
+}
+
+.imagebar{
+    height: 69px;
+    width: 100%;
+    background-color: var(--MazdaBlue);
+    bottom: 145px;
+ position: relative;
+  white-space:nowrap;
+  font-size: 18px;
+  text-align: center;
+
 }
