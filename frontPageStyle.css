@@ -1,0 +1,7 @@
+:root {
+    --MazdaBlue:#2F4180;
+}
+
+.test {
+    color: var(--MazdaBlue);
+}
