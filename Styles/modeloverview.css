@@ -1,3 +1,11 @@
+:root {
+    --MazdaBlue: #2F4180; 
+    --MazdaBlueText: #fff;
+}
+
+.overviewHeader{
+    text-align: center;
+}
 .cardWidth{
     width:400px;
 }
@@ -7,6 +15,7 @@
 .carName{
     margin-top: 10px;
     margin-left: 5px;
+    color: var(--MazdaBlueText);
 }
 
 .infoCards{
@@ -23,23 +32,23 @@
     margin: 5px;
     font-size: small;
     text-align: center;
-    color: #910a2d;
+    color: var(--MazdaBlueText);
 }
 
 .cardSpacing{
     margin-bottom: 5px;
     margin-right: 5px;
-    border-color: #910a2d;
+    border-color: var(--MazdaBlueText);
     background-color: transparent;
 }
 
 .buildButton{
-    border: 2px solid #910a2d;
-    color: #910a2d;
+    border: 2px solid var(--MazdaBlue);
+    color: var(--MazdaBlue);
 }
 .buildButton:hover{
     color: #fff;
-    background-color: #910a2d;
+    background-color: var(--MazdaBlue);
 }
 
 .underpicture{
@@ -55,7 +64,7 @@ article{
 .cardBackground{
     position: absolute;
     z-index: -1;
-    background-color: #d7d7d7;
+    background-color: var(--MazdaBlue);
     height: 115px;
     width: 400px;
 }
