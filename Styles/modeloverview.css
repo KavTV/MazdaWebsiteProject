@@ -5,7 +5,11 @@
 
 
 .outerContainer{
-    padding: 0px 120px;
+    padding: 50px 120px;
+}
+
+.carPadding{
+    padding: 10px 0px 0px 0px;
 }
 
 /*Text above cards*/
@@ -82,5 +86,8 @@ article{
     z-index: -1;
     background-color: var(--MazdaBlue);
     height: 115px;
-    width: 400px;
+    /* width: 400px; */
+    left: 0;
+    right: 0;
+    border-radius: 5px;
 }

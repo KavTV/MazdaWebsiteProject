@@ -1,0 +1,9 @@
+.navbarLogo{
+    display:flex;
+    position:fixed;
+    left:0px;
+    top:0px;
+    justify-content:center;
+    width:100%;
+    z-index: -1;
+}

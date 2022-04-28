@@ -6,24 +6,52 @@
     <meta charset="utf" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Styles/modeloverview.css">
+    <link rel="stylesheet" href="Styles/allPageStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 </head>
 
 <body>
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="HOME" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
+            <a href="modeloverview.html" class="w3-bar-item w3-button">MODELLER</a>
+            <a href="" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
+
+            </a>
+        </div>
+        <div class="navbarLogo">
+            <img src="Images/MazdaLogoNew.png" alt="logo">
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="MY MAZDA" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MAZDA</a>
+            <a href="MODELLER" class="w3-bar-item w3-button" onclick="toggleFunction()">MODELLER</a>
+        </div>
+    </div>
+
+
     <div class="container-fluid outerContainer">
         <h1 class="overviewHeader">Model Oversigt</h1>
         <div class="thinLine"></div>
         <div class="row">
             <div class="col">
                 <div class="card cardWidth cardShadows">
-                    <div class="card-body" style="z-index: 1;">
+                    <div class="card-body carPadding" style="z-index: 1;">
                         <div class="cardBackground"></div>
                         <div class="infoCards">
                             <div class="card cardSpacing">
                                 <p class="infoCardText">MILDHYBRID</p>
                             </div>
                             <div class="card cardSpacing">
-                                    <p class="infoCardText">BENZIN</p>
+                                <p class="infoCardText">BENZIN</p>
                             </div>
                         </div>
                         <h5 class="carName">Mazda 2</h5>
@@ -34,21 +62,21 @@
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <div class="col">
                 <div class="card cardWidth cardShadows">
-                    <div class="card-body" style="z-index: 1;">
+                    <div class="card-body carPadding" style="z-index: 1;">
                         <div class="cardBackground"></div>
                         <div class="infoCards">
                             <div class="card cardSpacing">
                                 <p class="infoCardText">MILDHYBRID</p>
                             </div>
                             <div class="card cardSpacing">
-                                    <p class="infoCardText">BENZIN</p>
+                                <p class="infoCardText">BENZIN</p>
                             </div>
                         </div>
                         <h5 class="carName">Mazda 2</h5>
@@ -59,21 +87,21 @@
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             <div class="col">
                 <div class="card cardWidth cardShadows">
-                    <div class="card-body" style="z-index: 1;">
+                    <div class="card-body carPadding" style="z-index: 1;">
                         <div class="cardBackground"></div>
                         <div class="infoCards">
                             <div class="card cardSpacing">
                                 <p class="infoCardText">MILDHYBRID</p>
                             </div>
                             <div class="card cardSpacing">
-                                    <p class="infoCardText">BENZIN</p>
+                                <p class="infoCardText">BENZIN</p>
                             </div>
                         </div>
                         <h5 class="carName">Mazda 2</h5>
@@ -84,11 +112,11 @@
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
