@@ -28,6 +28,7 @@
 /* CARD CSS */
 .cardWidth{
     width:400px;
+    margin: auto;
 }
 .cardShadows{
     border: none;

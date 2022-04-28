@@ -5,6 +5,12 @@
     margin: auto;
 }
 
-.marginAuto{
+.typeConfigText{
     margin: auto;
+    margin-top: 10px;
+}
+
+.typeConfigSeperator{
+    display: inline-flex;
+    gap: 100px;
 }
