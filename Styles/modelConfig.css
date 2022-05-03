@@ -19,9 +19,13 @@
     cursor: pointer;
 }
 
+h2{
+  font-weight: 600 !important;
+}
 
 
 
+/* Component selection sidebar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -72,4 +76,14 @@
   #main {
     transition: margin-left .5s;
     padding: 16px;
+  }
+
+  .sidebarCardHeaderText{
+    color: #212f5f;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .sidebarCardUnderText{
+    font-weight: 600;
+    margin-bottom: 15px;
   }
