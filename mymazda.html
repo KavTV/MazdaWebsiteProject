@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mazda</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/modelConfig.css">
+    <link rel="stylesheet" href="Styles/allPageStyle.css">
+    <link rel="stylesheet" href="Styles/myMazdaStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="HOME" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
+            <a href="modeloverview.html" class="w3-bar-item w3-button">MODELLER</a>
+            <a href="" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
+
+            </a>
+        </div>
+        <div class="navbarLogo">
+            <img style="width: 100%;" src="Images/MazdaLogoNew.png" alt="logo">
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="MY MAZDA" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MAZDA</a>
+            <a href="MODELLER" class="w3-bar-item w3-button" onclick="toggleFunction()">MODELLER</a>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin-top:100px;">
+        <div class="row">
+            <div class="col d-flex justify-content-center" style="height:30vh">
+                <img src="Images/Mazda2Config.jpg" style="height:100%" alt="">
+            </div>
+        </div>
+
+        <div class="row" style="height: 40vh; gap: 20px; margin: 0px 1%;">
+
+            <div class="col col-md d-flex align-items-center justify-content-center infoBox">
+                <h1 class="infoText">77.023 KM KØRT</h1>
+            </div>
+            <div class="col col-md d-flex align-items-center justify-content-center infoBox">
+                <h1 class="infoText">365 KM TILBAGE I TANKEN</h1>
+            </div>
+            <div class="col col-md d-flex align-items-center justify-content-center infoBox" style="cursor: pointer;">
+                <h1 class="infoText">Service</h1>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

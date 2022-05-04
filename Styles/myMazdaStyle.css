@@ -1,0 +1,9 @@
+.infoText{
+    white-space: nowrap;
+    color: white;
+    font-weight: 500;
+}
+.infoBox{
+    background-color: #2f4180;
+    border-radius: 20px;
+}
