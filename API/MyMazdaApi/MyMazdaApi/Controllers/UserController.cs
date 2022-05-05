@@ -18,6 +18,9 @@ namespace MyMazdaApi.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        
+
+
         // GET api/<UserController>/5
         [HttpGet("{id}")]
         public string Get(int id)
