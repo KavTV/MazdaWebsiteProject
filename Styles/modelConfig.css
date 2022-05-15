@@ -23,6 +23,12 @@ h2{
   font-weight: 600 !important;
 }
 
+.sidebarOption{
+  margin-bottom: 15px;
+  cursor: pointer;
+  min-width: 418px;
+}
+
 
 
 /* Component selection sidebar */
@@ -49,7 +55,7 @@ h2{
   }
   
   .sidebar a:hover {
-    color: #f1f1f1;
+    color: var(--MazdaBlue);
   }
   
   .sidebar .closebtn {
@@ -79,7 +85,7 @@ h2{
   }
 
   .sidebarCardHeaderText{
-    color: #212f5f;
+    color: var(--MazdaBlue);
     font-weight: 400;
     text-transform: uppercase;
   }

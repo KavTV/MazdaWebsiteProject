@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script type="text/javascript" src="JS/ConfigPage.js"></script>
     <title>Model configurator</title>
 </head>
 
@@ -111,7 +112,7 @@
         <div class="col">
 
             <!-- Motor selection -->
-            <div class="card" style="margin-bottom: 15px;">
+            <div class="card sidebarOption" onclick="closeNav()">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
                         <h2>SKYACTIV-G 1.5</h2>
@@ -152,7 +153,7 @@
 
             </div>
             
-            <div class="card" style="margin-bottom: 15px;">
+            <div class="card sidebarOption" onclick="closeNav()">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
                         <h2>SKYACTIV-G 1.5</h2>
@@ -196,18 +197,6 @@
         </div>
     </div>
 
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "450px";
-            document.getElementById("main").style.marginRight = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginRight = "0";
-        }
-    </script>
 </body>
 
 </html>

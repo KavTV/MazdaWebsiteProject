@@ -7,3 +7,8 @@
     width:100%;
     z-index: -1;
 }
+
+:root {
+    --MazdaBlue:#2F4180;
+    --MazdaBlueText:#ffffff;
+}
