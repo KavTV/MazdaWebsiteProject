@@ -41,7 +41,7 @@
 
 .infoCards{
     position: absolute;
-    left: 120px;
+    left: 170px;
     display: flex;
     flex: auto;
     flex-flow: column;
@@ -91,4 +91,8 @@ article{
     left: 0;
     right: 0;
     border-radius: 5px;
+}
+
+.rowSpacing{
+    margin-top: 40px;
 }

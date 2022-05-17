@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BCrypt.Net;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,37 +12,49 @@ namespace MyMazdaApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        // GET: api/<UserController>
+        SqlConnection con = new SqlConnection(constants.connectionString);
+
+        // GET api/<UserController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public bool Get(string username, string password)
         {
-            return new string[] { "value1", "value2" };
-        }
+            SqlCommand cmd = new SqlCommand("exec GetUserHash @username", con);
 
-        
+            cmd.Parameters.Add(new SqlParameter("username", username));
+
+            con.Open();
+
+            try
+            {
+                string hash = cmd.ExecuteScalar().ToString();
+
+                con.Close();
+
+                if (BCrypt.Net.BCrypt.Verify(password, hash))
+                {
+                    return true;
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
 
 
-        // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+            return false;
         }
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] string username, string password)
+        public void Post([FromBody] User user)
         {
             //Hash password
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
-            SqlConnection con = new SqlConnection(constants.connectionString);
-            
+            SqlCommand cmd = new SqlCommand("exec CreateUser @username, @password", con);
 
-            SqlCommand cmd = new SqlCommand("",con);
-
-            cmd.Parameters.Add(new SqlParameter("_username", username));
-            cmd.Parameters.Add(new SqlParameter("_password", hashedPassword));
+            cmd.Parameters.Add(new SqlParameter("username", user.Username));
+            cmd.Parameters.Add(new SqlParameter("password", hashedPassword));
 
             con.Open();
 
@@ -50,16 +63,5 @@ namespace MyMazdaApi.Controllers
             con.Close();
         }
 
-        // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<UserController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

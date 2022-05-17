@@ -17,30 +17,9 @@
 
 <body>
 
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="HOME" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
-            <a href="modeloverview.html" class="w3-bar-item w3-button">MODELLER</a>
-            <a href="" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
-
-            </a>
-        </div>
-        <div class="navbarLogo">
-            <img style="width: 100%;" src="Images/MazdaLogoNew.png" alt="logo">
-        </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="MY MAZDA" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MAZDA</a>
-            <a href="MODELLER" class="w3-bar-item w3-button" onclick="toggleFunction()">MODELLER</a>
-        </div>
-    </div>
-
+    <?php
+    include_once('header.php');
+    ?>
 
     <div class="container-fluid">
         <div class="row" style="margin-top: 100px;">
@@ -96,7 +75,7 @@
             </div>
 
             <div class="col d-flex justify-content-center">
-                <h1>159.000</h1>
+                <h1>159.000 kr.</h1>
             </div>
         </div>
         <div class="row">
@@ -152,7 +131,7 @@
                 </div>
 
             </div>
-            
+
             <div class="card sidebarOption" onclick="closeNav()">
                 <div class="row">
                     <div class="col d-flex justify-content-center">

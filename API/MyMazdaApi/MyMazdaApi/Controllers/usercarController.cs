@@ -12,6 +12,10 @@ namespace MyMazdaApi.Controllers
         [HttpGet]
         public Car Get(string username)
         {
+            if (username == null)
+            {
+                return null;
+            }
             SqlConnection con = new SqlConnection(constants.connectionString);
 
 

@@ -11,78 +11,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="Styles/frontPageStyle.css">
 <link rel="stylesheet" href="Styles/allPageStyle.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
-.bottomleft {
-  bottom: 145px;
-  position: relative;
-  white-space:nowrap;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1{
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url("Images/MazdaFrontPage.jpg");
-  height: 100%;
-}
-
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-   
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="HOME" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
-    <a href="MODELLER" class="w3-bar-item w3-button">MODELLER</a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
-    
-    </a>
-  </div>
-  <div class="navbarLogo">
-    <img src="Images/MazdaLogoNew.png" alt="logo">
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="MY MAZDA" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MAZDA</a>
-    <a href="modeloverview.html" class="w3-bar-item w3-button" onclick="toggleFunction()">MODELLER</a>
-  </div>
-</div>
+<?php
+    include_once('header.php');
+    ?>
 
 <!-- First Parallax Image with Logo Text -->
 <div style="height: 100%;">
-  <div class="bgimg-1 w3-display-container w3-center" id="home">
-  </div>  
+  <video controlslist="nodownload"  preload="metadata" autoplay  loop="true" muted="true" class="videoSize">
+    <source src="https://dk.cdn.mazda.media/497545c0d81b482894ed0d55fb2c0bf2/c0e8bb965c1e4c9c9b439188476f9489.mp4?rnd=48fa34#t=0.001" type="video/mp4">
+  </video>
+  <!-- <div class="bgimg-1 w3-display-container w3-center" id="home">
+  </div>   -->
   <div class="bottomleft">
   <span style ="padding:70px 100px;font-size:50px; background-color:var(--MazdaBlue);color:var(--MazdaBlueText);"class="w3-center w3-wide w3-animate-opacity">Zoom <span class="w3-hide-small">Zoom</span> Forever</span>
   </div>
@@ -114,15 +56,15 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+// window.onscroll = function() {myFunction()};
+// function myFunction() {
+//     var navbar = document.getElementById("myNavbar");
+//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+//     } else {
+//         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+//     }
+// }
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {

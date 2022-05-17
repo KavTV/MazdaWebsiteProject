@@ -1,5 +1,32 @@
+<?php
+session_start();
+
+//If the user has not logged in, send him back to mainpage
+if(!isset($_SESSION['username'])){
+    header("Location: index.html");
+}
+$url = sprintf("https://localhost:44307/api/usercar?username=%s", $_SESSION['username']);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // For HTTPS
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); // For HTTPS
+$response = curl_exec($ch);
+curl_close($ch);
+
+$json = json_decode($response, true);
+
+//Add values to variables
+$kmDriven = $json['kmDriven'];
+$model = $json['model'];
+$kmLeft = $json['kmLeft'];
+$username = $json['username'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,35 +39,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="JS/User.js"></script>
 </head>
+
 <body>
-    
+
     <!-- NAVBAR -->
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="HOME" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
-            <a href="modeloverview.html" class="w3-bar-item w3-button">MODELLER</a>
-            <a href="" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
-
-            </a>
-        </div>
-        <div class="navbarLogo">
-            <img style="width: 100%;" src="Images/MazdaLogoNew.png" alt="logo">
-        </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="MY MAZDA" class="w3-bar-item w3-button" onclick="toggleFunction()">MY MAZDA</a>
-            <a href="MODELLER" class="w3-bar-item w3-button" onclick="toggleFunction()">MODELLER</a>
-        </div>
-    </div>
+    <?php
+    include_once('header.php');
+    ?>
 
     <div class="container-fluid" style="margin-top:100px;">
         <div class="row">
@@ -52,10 +58,10 @@
         <div class="row" style="height: 40vh; gap: 20px; margin: 0px 1%;">
 
             <div class="col col-md d-flex align-items-center justify-content-center infoBox">
-                <h1 id="kmdriven" class="infoText">77.023 KM KØRT</h1>
+                <h1 id="kmdriven" class="infoText"><?php echo $kmDriven; ?> KM Kørt</h1>
             </div>
             <div class="col col-md d-flex align-items-center justify-content-center infoBox">
-                <h1 id="kmleft" class="infoText">365 KM TILBAGE I TANKEN</h1>
+                <h1 id="kmleft" class="infoText"><?php echo $kmLeft; ?> KM TILBAGE I TANKEN</h1>
             </div>
             <div class="col col-md d-flex align-items-center justify-content-center infoBox" style="cursor: pointer;">
                 <h1 class="infoText">Service</h1>
@@ -65,4 +71,5 @@
     </div>
 
 </body>
+
 </html>
