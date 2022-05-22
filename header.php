@@ -1,4 +1,4 @@
-<div class="w3-top">
+<div class="w3-top navBar">
         <div class="w3-bar" id="myNavbar">
 
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
@@ -7,6 +7,12 @@
             </a>
             <a href="Index.php" class="w3-bar-item w3-button w3-hide-small"> HOME</a>
             <a href="modeloverview.php" class="w3-bar-item w3-button">MODELLER</a>
+            <?php 
+            session_start();
+            if(isset($_SESSION['username'])){
+                echo '<a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> Logout</a>';
+            }
+            ?>
             <a href="login.php" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
 
             </a>

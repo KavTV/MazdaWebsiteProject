@@ -2,8 +2,8 @@
 session_start();
 
 //If the user has not logged in, send him back to mainpage
-if(!isset($_SESSION['username'])){
-    header("Location: index.html");
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
 }
 $url = sprintf("https://localhost:44307/api/usercar?username=%s", $_SESSION['username']);
 $ch = curl_init();
@@ -49,6 +49,9 @@ $username = $json['username'];
     ?>
 
     <div class="container-fluid" style="margin-top:100px;">
+        <div class="d-flex justify-content-center">
+            <h1>Velkommen til, <?php echo $_SESSION['username']; ?></h1>
+        </div>
         <div class="row">
             <div class="col d-flex justify-content-center" style="height:30vh">
                 <img src="Images/Mazda2Config.jpg" style="height:100%" alt="">

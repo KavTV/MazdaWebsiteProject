@@ -46,21 +46,31 @@ namespace MyMazdaApi.Controllers
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] User user)
+        public bool Post([FromBody] User user)
         {
-            //Hash password
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            try
+            {
+                //Hash password
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
-            SqlCommand cmd = new SqlCommand("exec CreateUser @username, @password", con);
+                SqlCommand cmd = new SqlCommand("exec CreateUser @username, @password", con);
 
-            cmd.Parameters.Add(new SqlParameter("username", user.Username));
-            cmd.Parameters.Add(new SqlParameter("password", hashedPassword));
+                cmd.Parameters.Add(new SqlParameter("username", user.Username));
+                cmd.Parameters.Add(new SqlParameter("password", hashedPassword));
 
-            con.Open();
+                con.Open();
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-            con.Close();
+                con.Close();
+                //If everything went through, it was successful
+                return true;
+            }
+            catch (System.Exception)
+            {
+                //Return false to tell the user that we did not create a new user
+                return false;
+            }
         }
 
     }
