@@ -3,7 +3,7 @@ CREATE TABLE [User] (
     password char(60)
 );
 
-GO;
+GO
 
 CREATE TABLE [Car] (
 	id int	identity(1,1) primary key,
@@ -14,7 +14,7 @@ CREATE TABLE [Car] (
 	FOREIGN KEY (username) REFERENCES [User](username)
 );
 
-GO;
+GO
 
 CREATE OR ALTER PROCEDURE GetUserCar @username nvarchar(345)
 AS
@@ -27,7 +27,7 @@ insert into Car values('Mazda 2','4200','321','jens@mail.com');
 
 exec GetUserCar @username = 'jens@mail.com'
 
-GO;
+GO
 
 CREATE PROCEDURE CreateUser @username nvarchar(345), @password char(60)
 AS
@@ -35,7 +35,7 @@ begin
 	insert into [User] values(@username,@password);
 end
 
-GO;
+GO
 
 CREATE PROCEDURE GetUserHash @username nvarchar(345)
 AS
