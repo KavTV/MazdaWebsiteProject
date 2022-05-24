@@ -9,11 +9,14 @@ body{
     top:0px;
     justify-content:center;
     width:100%;
-    z-index: -1;
+    z-index: -1 !important;
 }
 
 .navBar a{
     color: #6077CC;
+}
+.navBar{
+    z-index: 100;
 }
 
 :root {

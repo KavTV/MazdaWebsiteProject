@@ -2,7 +2,9 @@
     --MazdaBlue:#2F4180;
     --MazdaBlueText:#ffffff;
 }
-
+body{
+  background-color: white;
+}
 .test {
     color: var(--MazdaBlue);
 }
@@ -50,6 +52,8 @@ body, html {
 
 .videoSize{
     height: 100%;
+    display: block;
+    margin: auto;
 }
 
 
