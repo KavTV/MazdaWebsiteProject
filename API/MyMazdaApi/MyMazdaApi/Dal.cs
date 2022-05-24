@@ -15,10 +15,11 @@ namespace MyMazdaApi
 
             cmd.Parameters.Add(new SqlParameter("username", username));
 
-            con.Open();
 
             try
             {
+                con.Open();
+                //Result should only contain 1 row
                 string hash = cmd.ExecuteScalar().ToString();
 
                 con.Close();
@@ -47,12 +48,13 @@ namespace MyMazdaApi
 
                 SqlCommand cmd = new SqlCommand("exec CreateUser @username, @password", con);
 
+                //Use parameters so avoid SQL-Injection
                 cmd.Parameters.Add(new SqlParameter("username", user.Username));
                 cmd.Parameters.Add(new SqlParameter("password", hashedPassword));
 
                 con.Open();
 
-                //Execute, but down receive anything because it does not return anything
+                //Execute, but dont receive anything because it does not return anything
                 cmd.ExecuteNonQuery();
 
                 con.Close();
