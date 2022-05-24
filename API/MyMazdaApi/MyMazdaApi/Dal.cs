@@ -5,7 +5,7 @@ namespace MyMazdaApi
 {
     public class Dal
     {
-        SqlConnection con = new SqlConnection(constants.connectionString);
+        SqlConnection con = new SqlConnection(Constants.connectionString);
 
 
 
@@ -52,6 +52,7 @@ namespace MyMazdaApi
 
                 con.Open();
 
+                //Execute, but down receive anything because it does not return anything
                 cmd.ExecuteNonQuery();
 
                 con.Close();
@@ -67,6 +68,7 @@ namespace MyMazdaApi
 
         public Car GetUserCar(string username)
         {
+            //Cannot get a usercar if username is empty
             if (username == null)
             {
                 return null;

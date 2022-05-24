@@ -10,7 +10,7 @@
             <?php 
             session_start();
             if(isset($_SESSION['username'])){
-                echo '<a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> Logout</a>';
+                echo '<a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-sign-out"></i> Logout</a>';
             }
             ?>
             <a href="login.php" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> MY MAZDA</a>
@@ -18,7 +18,7 @@
             </a>
         </div>
         <div class="navbarLogo">
-            <img style="width: 100%;" src="Images/MazdaLogoNew.png" alt="logo">
+            <img  src="Images/MazdaLogoNew.png" alt="logo">
         </div>
 
         <!-- Navbar on small screens -->

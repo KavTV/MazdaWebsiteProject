@@ -6,6 +6,7 @@
 
 .outerContainer{
     padding: 50px 120px;
+    z-index: 1;
 }
 
 .carPadding{

@@ -22,7 +22,10 @@ begin
 	Select model,kmdriven,kmleft,username from Car WHERE username = @username
 end
 
-insert into [User] values('jens@mail.com','noget');
+GO
+
+-- Password: hans
+insert into [User] values('jens@mail.com','$2b$10$ksVG5trzEmgAQhmcvf2yAuaB1F7mT1TiOLCUrVat4Er6LzfKETvdq');
 insert into Car values('Mazda 2','4200','321','jens@mail.com');
 
 exec GetUserCar @username = 'jens@mail.com'

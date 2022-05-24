@@ -12,65 +12,30 @@ namespace MyMazdaApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        SqlConnection con = new SqlConnection(constants.connectionString);
+        MazdaManager mazdaManager = new MazdaManager();
 
-        // GET api/<UserController>
+        // GET api/User
+        //Check user login password
         [HttpGet]
         public bool Get(string username, string password)
         {
-            SqlCommand cmd = new SqlCommand("exec GetUserHash @username", con);
-
-            cmd.Parameters.Add(new SqlParameter("username", username));
-
-            con.Open();
-
-            try
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                string hash = cmd.ExecuteScalar().ToString();
-
-                con.Close();
-
-                if (BCrypt.Net.BCrypt.Verify(password, hash))
-                {
-                    return true;
-                }
+                return false;
             }
-            catch (System.Exception e)
-            {
-                Debug.WriteLine(e.Message);
-            }
-
-
-            return false;
+            return mazdaManager.GetUserHash(username, password);
         }
 
-        // POST api/<UserController>
+        // POST api/User
+        //Create user
         [HttpPost]
         public bool Post([FromBody] User user)
         {
-            try
+            if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
             {
-                //Hash password
-                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
-
-                SqlCommand cmd = new SqlCommand("exec CreateUser @username, @password", con);
-
-                cmd.Parameters.Add(new SqlParameter("username", user.Username));
-                cmd.Parameters.Add(new SqlParameter("password", hashedPassword));
-
-                con.Open();
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-                //If everything went through, it was successful
-                return true;
-            }
-            catch (System.Exception)
-            {
-                //Return false to tell the user that we did not create a new user
                 return false;
             }
+            return mazdaManager.CreateUser(user);
         }
 
     }
