@@ -36,7 +36,7 @@
                         <img class="cardWidth" src="Images/MX-5.png" />
                         <div class="underpicture">
                             <article>Fra 339.500 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\MazdaMX5RFConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -61,7 +61,7 @@
                         <img class="cardWidth" src="Images/mazda2.png" />
                         <div class="underpicture">
                             <article>Fra 159.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda2Config.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -86,7 +86,7 @@
                         <img class="cardWidth" src="Images/Mazda2Hybrid.png" />
                         <div class="underpicture">
                             <article>Fra 197.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda2HybridConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -115,7 +115,7 @@
                         <img class="cardWidth" src="Images/Mazda3H.png" />
                         <div class="underpicture">
                             <article>Fra 255.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda3HConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -140,7 +140,7 @@
                         <img class="cardWidth" src="Images/Mazda3S.png" />
                         <div class="underpicture">
                             <article>Fra 255.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda3SConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -162,7 +162,7 @@
                         <img class="cardWidth" src="Images/Mazda6ST.png" />
                         <div class="underpicture">
                             <article>Fra 375.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda6STConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -186,7 +186,7 @@
                         <img class="cardWidth" src="Images/Mazda6SE.png" />
                         <div class="underpicture">
                             <article>Fra 365.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\Mazda6SEConfig.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -211,7 +211,7 @@
                         <img class="cardWidth" src="Images/CX-30.png" />
                         <div class="underpicture">
                             <article>Fra 270.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\MazdaCX30Config.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>
@@ -236,7 +236,7 @@
                         <img class="cardWidth" src="Images/CX-5.png" />
                         <div class="underpicture">
                             <article>Fra 310.000 kr</article>
-                            <a href="modelconfig.php">
+                            <a href="modelconfig.php?model=Images\MazdaCX5Config.jpg">
                                 <button style="width: 100px;" class="btn buildButton">Byg</button>
                             </a>
                         </div>

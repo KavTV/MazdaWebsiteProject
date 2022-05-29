@@ -80,15 +80,23 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <img src="Images/Mazda2Config.jpg" alt="Mazda2" style="height: 80vh;">
+                <?php
+                if(isset($_GET["model"])){
+                    echo '<img src="'.$_GET["model"].'" style="height: 80vh;">';
+                }
+                else{
+                    echo '<img src="Images/Mazda2Config.jpg" alt="Mazda2" style="height: 80vh;">';
+                }
+                ?>
+                
             </div>
         </div>
 
     </div>
 
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="col">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
             <!-- Motor selection -->
             <div class="card sidebarOption" onclick="closeNav()">
