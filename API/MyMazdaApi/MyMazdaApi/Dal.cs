@@ -11,6 +11,7 @@ namespace MyMazdaApi
 
         public bool GetUserHash(string username, string password)
         {
+            //Use the stored procedure to get the hash of a specific user
             SqlCommand cmd = new SqlCommand("exec GetUserHash @username", con);
 
             cmd.Parameters.Add(new SqlParameter("username", username));
@@ -71,7 +72,7 @@ namespace MyMazdaApi
         public Car GetUserCar(string username)
         {
             //Cannot get a usercar if username is empty
-            if (username == null)
+            if (string.IsNullOrWhiteSpace(username))
             {
                 return null;
             }
@@ -88,6 +89,9 @@ namespace MyMazdaApi
 
             while (reader.Read())
             {
+                //Get the information based on what column it is received
+                //Right now this will loop through all cars, but take the last one,
+                //since there is no support to show multiple cars
                 car.Model = reader.GetString(0);
                 car.kmDriven = reader.GetInt32(1);
                 car.kmLeft = reader.GetInt32(2);
