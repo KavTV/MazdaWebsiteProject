@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <script type="text/javascript" src="JS/ConfigPage.js"></script>
+    <script src="JS/Header.js"></script>
     <title>Model configurator</title>
 </head>
 
