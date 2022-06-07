@@ -23,7 +23,6 @@ if (isset($_POST['username']) && !empty($_POST['password'])) {
     $response = curl_exec($ch);
     curl_close($ch);
 
-    echo $response;
 
     if ($response == "true") {
         $_SESSION['username'] = $_POST['username'];
